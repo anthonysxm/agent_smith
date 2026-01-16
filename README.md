@@ -36,11 +36,11 @@ devsecops-lm-project/
 
 🛠️ Prerequisites
 
-    Python: 3.10 or higher.
+Python: 3.10 or higher.
 
-    GPU: NVIDIA GPU with at least 6GB VRAM (for Gemma 2B).
+GPU: NVIDIA GPU with at least 6GB VRAM (for Gemma 2B).
 
-    Drivers: CUDA 12.x installed.
+Drivers: CUDA 12.x installed.
 
 📦 Installation
 
@@ -101,17 +101,17 @@ curl -X POST "http://localhost:8000/generate" \
 
 ⚙️ Configuration
 
-    Prompts: Modify config/prompts.py to change the System Prompt ("Persona") of the model.
+Prompts: Modify config/prompts.py to change the System Prompt ("Persona") of the model.
 
-    Hyperparameters: Adjust src/training/fine_tune_keras.py (Batch size, LoRA Rank, Learning Rate) to fit your hardware capabilities.
+Hyperparameters: Adjust src/training/fine_tune_keras.py (Batch size, LoRA Rank, Learning Rate) to fit your hardware capabilities.
 
 🛡️ Security Disclaimer
 
 While this pipeline includes a DataSanitizer based on Regex patterns, it is a defense-in-depth measure.
 
-    Do not rely solely on it. Always audit your dataset for sensitive secrets before ingestion.
+Do not rely solely on it. Always audit your dataset for sensitive secrets before ingestion.
 
-    Generated models may still hallucinate or produce insecure code suggestions. Always review AI-generated output.
+Generated models may still hallucinate or produce insecure code suggestions. Always review AI-generated output.
 
 📄 License
 
