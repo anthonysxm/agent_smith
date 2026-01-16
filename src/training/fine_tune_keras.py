@@ -3,7 +3,11 @@ import os
 # --- BACKEND CONFIGURATION ---
 # strictly define backend before importing Keras.
 # JAX is recommended for high performance on GPUs/TPUs with XLA compilation.
+
 os.environ["KERAS_BACKEND"] = "jax"
+#os.environ["KERAS_BACKEND"] = "tensorflow"
+#os.environ["XLA_PYTHON_CLIENT_MEM_FRACTION"] = "0.80"
+
 # Avoid preallocating 100% of GPU memory (JAX specific behavior)
 os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
 
@@ -22,7 +26,7 @@ OUTPUT_FILENAME = "devsecops_adapter_v1.lora.h5"
 # Model Configuration
 PRESET = "gemma_2b_en"  # Lightweight model, suitable for tests and low-VRAM
 LORA_RANK = 4           # Rank of the LoRA matrices (4, 8, 16)
-SEQ_LENGTH = 512        # Context window size
+SEQ_LENGTH = 256        # Context window size
 BATCH_SIZE = 1          # Set to 1 for consumer GPUs, increase for A100/H100
 EPOCHS = 1              # 1 epoch is usually sufficient for small datasets
 LEARNING_RATE = 5e-5
