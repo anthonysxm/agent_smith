@@ -16,7 +16,7 @@ It leverages **Keras 3** and **JAX** to fine-tune the **Gemma 2 (2B Instruct)** 
 
 ## 📂 Project Structure
 
-```text
+```
 devsecops-lm-project/
 ├── data/                          # Data storage (GitIgnored)
 │   ├── 01_raw/                    # Place your raw logs/docs here
