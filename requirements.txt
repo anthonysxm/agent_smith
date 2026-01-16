@@ -1,0 +1,21 @@
+# --- Core ML Frameworks ---
+keras>=3.0.0
+keras-nlp>=0.8.0
+
+# --- Backend (JAX with CUDA support) ---
+# Note: In production, install jax[cuda12] specifically via pip command usually,
+# but listing jax here ensures basic compatibility.
+jax
+jaxlib
+
+# Fallback backend (optional but recommended for data processing)
+tensorflow>=2.16.0
+
+# --- API & Serving ---
+fastapi>=0.100.0
+uvicorn>=0.20.0
+pydantic>=2.0.0
+
+# --- Utilities ---
+# For environment variables
+python-dotenv
