@@ -34,7 +34,7 @@ devsecops-lm-project/
 └── README.md                      # This file
 ```
 
-🛠️ Prerequisites
+## 🛠️ Prerequisites
 
 Python: 3.10 or higher.
 
@@ -42,7 +42,7 @@ GPU: NVIDIA GPU with at least 6GB VRAM (for Gemma 2B).
 
 Drivers: CUDA 12.x installed.
 
-📦 Installation
+## 📦 Installation
 
 Clone the repository:
 
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 pip install -U "jax[cuda12]"
 ```
 
-⚡ Workflow & Usage
+## ⚡ Workflow & Usage
 1. Data Preparation (ETL)
 
 Place your raw .txt or .log files in data/01_raw/.
@@ -99,13 +99,13 @@ curl -X POST "http://localhost:8000/generate" \
      -d '{"instruction": "How do I secure a Docker container?", "max_length": 128}'
 ```
 
-⚙️ Configuration
+## ⚙️ Configuration
 
 Prompts: Modify config/prompts.py to change the System Prompt ("Persona") of the model.
 
 Hyperparameters: Adjust src/training/fine_tune_keras.py (Batch size, LoRA Rank, Learning Rate) to fit your hardware capabilities.
 
-🛡️ Security Disclaimer
+## 🛡️ Security Disclaimer
 
 While this pipeline includes a DataSanitizer based on Regex patterns, it is a defense-in-depth measure.
 
@@ -113,6 +113,6 @@ Do not rely solely on it. Always audit your dataset for sensitive secrets before
 
 Generated models may still hallucinate or produce insecure code suggestions. Always review AI-generated output.
 
-📄 License
+## 📄 License
 
 MIT License
